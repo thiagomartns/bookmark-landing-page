@@ -39,6 +39,8 @@
 
     --grayish-blue: 229, 8%, 60%;
     --very-dark-blue: 229, 31%, 21%;
+    --custom-purple: #5267df;
+    --custom-gray-lighter: #f7f7f7;
   }
 
   .dark {

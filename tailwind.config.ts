@@ -26,8 +26,10 @@ const config = {
         foreground: "hsl(var(--foreground))",
         "soft-blue": "hsl(var(--soft-blue))",
         "soft-red": "hsl(var(--soft-red))",
-        "grayish-blue": "hsl(var(--soft-grayish-blue))",
+        "grayish-blue": "hsl(var(--grayish-blue))",
         "very-dark-blue": "hsl(var(--very-dark-blue))",
+        "custom-purple": "var(--custom-purple)",
+        "custom-grey-lighter": "var(--custom-grey-lighter)",
 
         primary: {
           DEFAULT: "hsl(var(--primary))",
