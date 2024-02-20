@@ -1,6 +1,5 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { ActionButton } from "../action-button";
 
 export const CallToAction = () => {
@@ -12,12 +11,7 @@ export const CallToAction = () => {
       </h1>
       <form className="flex flex-col w-full items-center justify-center gap-4 px-10">
         <Input type="email" placeholder="Enter your email address" />
-        <ActionButton
-          className="w-full"
-          label="Contact us"
-          size="fullWidth"
-          color="red"
-        />
+        <ActionButton className="w-full " label="Contact us" color="red" />
       </form>
     </section>
   );
