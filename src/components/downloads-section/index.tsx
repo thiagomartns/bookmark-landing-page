@@ -5,6 +5,7 @@ import LogoFirefox from "@/assets/images/logo-firefox.svg";
 import LogoOpera from "@/assets/images/logo-opera.svg";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { ActionButton } from "../action-button";
 
 const browserList = [
   {
@@ -55,13 +56,7 @@ export const DownloadsSection = () => {
               </p>
             </CardContent>
             <CardFooter>
-              <Button
-                className="bg-custom-purple hover:bg-custom-purple"
-                size="lg"
-              >
-                {" "}
-                Add & Install Extension
-              </Button>
+              <ActionButton label="Add & Install Extension" size="xl" />
             </CardFooter>
           </Card>
         ))}

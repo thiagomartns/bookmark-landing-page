@@ -1,10 +1,10 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import TabsPanelImg1 from "@/assets/images/illustration-features-tab-1.svg";
 import TabsPanelImg2 from "@/assets/images/illustration-features-tab-2.svg";
 import TabsPanelImg3 from "@/assets/images/illustration-features-tab-3.svg";
+import { ActionButton } from "@/components/action-button";
 
 const featuresList = [
   {
@@ -54,13 +54,7 @@ export const CustomTabs = () => {
             {feature.title}
           </h1>
           <p className="text-grayish-blue text-center">{feature.description}</p>
-          <Button
-            className="bg-custom-purple hover:bg-custom-purple w-30 m-auto"
-            size="lg"
-          >
-            {" "}
-            More Info
-          </Button>
+          <ActionButton label="More Info" />
         </TabsContent>
       ))}
     </Tabs>

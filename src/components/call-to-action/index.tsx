@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { ActionButton } from "../action-button";
 
 export const CallToAction = () => {
   return (
@@ -11,9 +12,12 @@ export const CallToAction = () => {
       </h1>
       <form className="flex flex-col w-full items-center justify-center gap-4 px-10">
         <Input type="email" placeholder="Enter your email address" />
-        <Button className="bg-soft-red hover:bg-soft-red w-full" size="lg">
-          Contact Us
-        </Button>
+        <ActionButton
+          className="w-full"
+          label="Contact us"
+          size="fullWidth"
+          color="red"
+        />
       </form>
     </section>
   );

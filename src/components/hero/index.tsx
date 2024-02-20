@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import HeroMainImg from "@/assets/images/illustration-hero.svg";
+import { ActionButton } from "../action-button";
 
 export const HeroComponent = () => {
   return (
@@ -18,15 +19,8 @@ export const HeroComponent = () => {
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div className="flex gap-5">
-          <Button className="bg-custom-purple hover:bg-custom-purple" size="lg">
-            Get it on Chrome
-          </Button>
-          <Button
-            className="bg-custom-grey-lighter text-very-dark-blue hover:bg-custom-grey-lighter shadow-lg"
-            size="lg"
-          >
-            Get it on Firefox
-          </Button>
+          <ActionButton label="Get it on Chrome" />
+          <ActionButton color="white" label="Get it on Firefox" />
         </div>
       </section>
     </>
