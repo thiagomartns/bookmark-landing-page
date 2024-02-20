@@ -7,6 +7,25 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "../ui/button";
 
+const questionList = [
+  {
+    id: 1,
+    question: "What is Bookmark?",
+  },
+  {
+    id: 2,
+    question: "How can I request?",
+  },
+  {
+    id: 3,
+    question: "Is there a mobile app?",
+  },
+  {
+    id: 4,
+    question: "What about other Chromium browsers?",
+  },
+];
+
 export const FAQSection = () => {
   return (
     <section className="flex items-center justify-center flex-col p-10 gap-10">
@@ -18,24 +37,17 @@ export const FAQSection = () => {
         other questions you’d like answered please feel free to email us.
       </p>
       <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>What is Bookmark?</AccordionTrigger>
-          <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            autem odio vel eius dolor distinctio possimus tempora ex excepturi
-            rem maxime error ea dolores, placeat fugiat eligendi architecto
-            iste!
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>How can I request a new browser?</AccordionTrigger>
-          <AccordionContent>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            autem odio vel eius dolor distinctio possimus tempora ex excepturi
-            rem maxime error ea dolores, placeat fugiat eligendi architecto
-            iste!
-          </AccordionContent>
-        </AccordionItem>
+        {questionList.map((question) => (
+          <AccordionItem key={question.id} value={`item-${question.id}`}>
+            <AccordionTrigger>{question.question}</AccordionTrigger>
+            <AccordionContent>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam autem odio vel eius dolor distinctio possimus tempora
+              ex excepturi rem maxime error ea dolores, placeat fugiat eligendi
+              architecto iste!
+            </AccordionContent>
+          </AccordionItem>
+        ))}
       </Accordion>
       <Button
         className="bg-custom-purple hover:bg-custom-purple w-30 m-auto"
