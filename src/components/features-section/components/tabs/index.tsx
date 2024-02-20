@@ -35,8 +35,8 @@ const featuresList = [
 
 export const CustomTabs = () => {
   return (
-    <Tabs defaultValue="1" className="p-10">
-      <TabsList className="w-full">
+    <Tabs defaultValue="1" className="">
+      <TabsList className="">
         {featuresList.map((feature) => (
           <TabsTrigger key={feature.id} value={feature.id}>
             {feature.feature}
