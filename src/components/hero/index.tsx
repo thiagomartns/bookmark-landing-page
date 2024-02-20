@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
 import HeroMainImg from "@/assets/images/illustration-hero.svg";
 import { ActionButton } from "../action-button";
 
 export const HeroComponent = () => {
   return (
     <>
-      <section className="flex justify-center items-center">
+      <section className="flex justify-center items-center relative">
         <Image src={HeroMainImg} alt="Hero main image" />
       </section>
       <section className="mt-5 flex items-center justify-center flex-col p-10 gap-10">

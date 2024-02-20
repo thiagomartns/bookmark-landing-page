@@ -36,7 +36,7 @@ export const FAQSection = () => {
         Frequently Asked Questions Here are some of our FAQs. If you have any
         other questions you’d like answered please feel free to email us.
       </p>
-      <Accordion type="single" collapsible>
+      <Accordion type="single" className="w-full" collapsible>
         {questionList.map((question) => (
           <AccordionItem key={question.id} value={`item-${question.id}`}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
