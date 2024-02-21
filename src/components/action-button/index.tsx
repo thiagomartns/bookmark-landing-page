@@ -6,6 +6,8 @@ interface ActionButtonProps {
   label: string;
   className?: React.ComponentProps<"div">["className"];
   size?: "xs" | "sm" | "md" | "lg" | "xl";
+  disabled?: boolean;
+  onClick?: () => {};
 }
 
 export const ActionButton = ({
@@ -13,6 +15,8 @@ export const ActionButton = ({
   label,
   className = "",
   size = "md",
+  onClick,
+  disabled = false,
 }: ActionButtonProps) => {
   const colorClass =
     color === "red"
@@ -34,7 +38,11 @@ export const ActionButton = ({
   }`;
 
   return (
-    <Button className={`${colorClass} ${sizeClass} m-auto ${className}`}>
+    <Button
+      disabled={disabled}
+      onClick={onClick}
+      className={`${colorClass} ${sizeClass} m-auto ${className}`}
+    >
       {label}
     </Button>
   );
