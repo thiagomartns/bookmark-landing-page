@@ -41,7 +41,7 @@ export const ActionButton = ({
     <Button
       disabled={disabled}
       onClick={onClick}
-      className={`${colorClass} ${sizeClass} m-auto ${className}`}
+      className={`${colorClass} ${sizeClass} m-auto ${className} shadow-lg`}
     >
       {label}
     </Button>
