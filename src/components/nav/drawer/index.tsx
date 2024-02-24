@@ -28,7 +28,7 @@ export const DrawerComponent = () => {
       title: "pricing",
     },
     {
-      id: 1,
+      id: 3,
       title: "contact",
     },
   ];
@@ -56,13 +56,14 @@ export const DrawerComponent = () => {
           <DrawerDescription className="p-10">
             <div className="flex flex-col text-xl mb-10 first: border-t-2">
               {drawerItems.map((item) => (
-                <Link
+                <div
                   key={item.id}
-                  href="#"
-                  className="tracking-widest border-b-2 text-white border-custom-grey-lighter p-5 "
+                  className="tracking-widest border-b-2 text-white border-custom-grey-lighter p-5 flex items-center justify-center "
                 >
-                  {item.title}
-                </Link>
+                  <Link href="#" className="text-center">
+                    {item.title}
+                  </Link>
+                </div>
               ))}
             </div>
             <Button className="w-full border-2 uppercase text-lg py-5 tracking-widest bg-transparent">
