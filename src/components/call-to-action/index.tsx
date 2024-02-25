@@ -30,13 +30,13 @@ export const CallToAction = () => {
     <section className="bg-custom-purple text-white lg:py-16">
       <div className="flex items-center justify-center flex-col p-10 gap-10 m-auto bg-custom-purple text-white lg: max-w-screen-xl">
         <h3 className="tracking-widest lg:text-xl">35,000+ ALREADY JOINED</h3>
-        <h1 className="text-3xl font-bold text-center lg:text-4xl">
+        <h1 className="text-3xl font-bold text-center lg:text-5xl">
           Stay up-to-date with what we’re doing
         </h1>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col items-center gap-4 w-full md:w-72 lg:w-96"
+            className="flex flex-col items-center gap-4 w-full md:w-72 lg:w-96 lg:flex-row lg:justify-center"
           >
             <FormField
               control={form.control}
@@ -54,11 +54,7 @@ export const CallToAction = () => {
                 </FormItem>
               )}
             />
-            <ActionButton
-              className="w-full lg:w-96"
-              label="Contact us"
-              color="red"
-            />
+            <Button className="bg-soft-red w-full shadow-xl">Contact us</Button>
           </form>
         </Form>
       </div>

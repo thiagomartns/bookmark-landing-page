@@ -7,7 +7,7 @@ export const FeaturesSection = () => {
       <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-4xl">
         Features
       </h1>
-      <p className="text-grayish-blue text-center lg:w-[50ch]">
+      <p className="text-grayish-blue text-center lg:w-[50ch] lg:text-lg">
         Our aim is to make it quick and easy for you to access your favourite
         websites. Your bookmarks sync between your devices so you can access
         them on the go.

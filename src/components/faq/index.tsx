@@ -32,14 +32,16 @@ export const FAQSection = () => {
       <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-4xl">
         Frequently Asked Questions
       </h1>
-      <p className="text-grayish-blue text-center lg:w-[50ch]">
+      <p className="text-grayish-blue text-center lg:w-[50ch] lg:text-lg">
         Frequently Asked Questions Here are some of our FAQs. If you have any
         other questions you’d like answered please feel free to email us.
       </p>
       <Accordion type="single" className="w-full md:w-64 lg:w-96" collapsible>
         {questionList.map((question) => (
           <AccordionItem key={question.id} value={`item-${question.id}`}>
-            <AccordionTrigger>{question.question}</AccordionTrigger>
+            <AccordionTrigger className="hover:text-soft-red">
+              {question.question}
+            </AccordionTrigger>
             <AccordionContent>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam autem odio vel eius dolor distinctio possimus tempora
