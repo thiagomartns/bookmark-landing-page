@@ -4,7 +4,6 @@ import IconFacebook from "@/assets/images/icon-facebook.svg";
 import IconTwitter from "@/assets/images/icon-twitter.svg";
 import FooterLogo from "@/assets/images/logo-bookmark-white.svg";
 import Link from "next/link";
-import { FacebookIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -26,7 +25,7 @@ export const Footer = () => {
         </div>
         <div className="flex justify-center gap-10">
           <Image src={IconFacebook} alt="Facebook Logo" />
-          <Image src={IconTwitter} alt="Twitter Logo" />
+          <Image width={24} height={24} src={IconTwitter} alt="Twitter Logo" />
         </div>
       </div>
     </footer>

@@ -71,7 +71,7 @@ export const DrawerComponent = () => {
         <DrawerFooter>
           <div className="flex justify-center items-center w-full gap-10 py-10">
             <Image src={IconFacebook} alt="Facebook Logo" />
-            <Image src={IconTwitter} alt="Facebook Logo" />
+            <Image src={IconTwitter} alt="Twitter Logo" />
           </div>
         </DrawerFooter>
       </DrawerContent>
