@@ -51,7 +51,7 @@ export const CustomTabs = () => {
           className="z-30 relative flex flex-col gap-7 items-center lg:flex-row lg:px-5 lg:gap-16"
         >
           <Image className="z-30" src={feature.img} alt={feature.title} />
-          <div className="lg:ellipse-custom left-[-50%] top-[30%] rotate-180"></div>
+          <div className="xl:ellipse-custom left-[-50%] top-[30%] rotate-180"></div>
           <div className="z-30 flex flex-col gap-5 lg:items-start">
             <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
               {feature.title}

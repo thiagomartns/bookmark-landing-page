@@ -39,7 +39,7 @@ export const DownloadsSection = () => {
           do let us know if you’ve got a favourite you’d like us to prioritize.
         </p>
       </div>
-      <div className="flex items-center justify-center flex-col gap-10 lg:[&>*:nth-child(3)]:mt-32 lg:[&>*:nth-child(2)]:mt-16 lg:flex-row">
+      <div className="flex items-center justify-center flex-col gap-10 xl:[&>*:nth-child(3)]:mt-32 xl:[&>*:nth-child(2)]:mt-16 xl:flex-row">
         {browserList.map((card) => (
           <Card
             key={card.id}

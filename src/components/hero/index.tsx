@@ -5,13 +5,13 @@ import { Button } from "../ui/button";
 
 export const HeroComponent = () => {
   return (
-    <section className="p-6 flex flex-col m-auto lg:max-w-screen-xl lg:flex-row-reverse lg:pr-0">
+    <section className="p-6 flex flex-col items-center m-auto xl:max-w-screen-xl xl:flex-row-reverse xl:pr-0">
       <Image
         src={HeroMainImg}
         alt="Hero main image"
         className="z-10 relative"
       />
-      <div className="lg:ellipse-custom right-[-15%] bottom-[20%]"></div>
+      <div className="xl:ellipse-custom right-[-15%] bottom-[20%]"></div>
       <div className="flex items-center justify-center flex-col gap-10 z-10 lg:items-start">
         <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-5xl lg:text-left">
           a simple bookmark manager
@@ -21,16 +21,10 @@ export const HeroComponent = () => {
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div className="flex gap-5">
-          <Button
-            size="lg"
-            className="bg-custom-purple border-2 border-custom-purple shadow-2xl hover:bg-transparent hover:text-custom-purple lg:"
-          >
+          <Button className="bg-custom-purple border-2 border-custom-purple shadow-2xl hover:bg-transparent hover:text-custom-purple lg:">
             Get in on Chrome
           </Button>
-          <Button
-            size="lg"
-            className="bg-white border-2 text-grayish-blue border-white shadow-2xl hover:border-grayish-blue hover:bg-transparent "
-          >
+          <Button className="bg-white border-2 text-grayish-blue border-white shadow-2xl hover:border-grayish-blue hover:bg-transparent ">
             Get in on Firefox
           </Button>
         </div>
