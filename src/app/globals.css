@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .ellipse-custom {
+    background-image: url("../assets/images/Rectangle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 900px;
+    height: 452px;
+    z-index: 0;
+  }
+}
+
 @layer base {
   :root {
+    overflow-x: hidden;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 

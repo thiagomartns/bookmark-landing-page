@@ -36,8 +36,8 @@ const featuresList = [
 
 export const CustomTabs = () => {
   return (
-    <Tabs defaultValue="1" className="flex flex-col mt-5 lg:min-w-full">
-      <TabsList className="flex-col items-center justify-center mb-10 lg:flex-row">
+    <Tabs defaultValue="1" className="flex flex-col mt-5  lg:min-w-full">
+      <TabsList className=" z-30 flex-col items-center justify-center mb-10 lg:flex-row">
         {featuresList.map((feature) => (
           <TabsTrigger key={feature.id} value={feature.id}>
             {feature.feature}
@@ -48,10 +48,11 @@ export const CustomTabs = () => {
         <TabsContent
           key={feature.id}
           value={feature.id}
-          className="flex flex-col gap-7 items-center lg:flex-row lg:px-5 lg:gap-16"
+          className="z-30 relative flex flex-col gap-7 items-center lg:flex-row lg:px-5 lg:gap-16"
         >
-          <Image src={feature.img} alt={feature.title} />
-          <div className="flex flex-col gap-5 lg:items-start">
+          <Image className="z-30" src={feature.img} alt={feature.title} />
+          <div className="lg:ellipse-custom left-[-50%] top-[30%] rotate-180"></div>
+          <div className="z-30 flex flex-col gap-5 lg:items-start">
             <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
               {feature.title}
             </h1>
