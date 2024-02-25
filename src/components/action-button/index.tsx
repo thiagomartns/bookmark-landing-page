@@ -25,17 +25,27 @@ export const ActionButton = ({
       ? "bg-white text-very-dark-blue hover:bg-white"
       : "bg-custom-purple text-white hover:bg-custom-purple";
 
-  const sizeClass = `w-${
-    size === "xl"
-      ? 48
-      : size === "lg"
-      ? 36
-      : size === "sm"
-      ? 24
-      : size === "xs"
-      ? 20
-      : 30
-  }`;
+  let sizeClass = "w-30";
+
+  switch (size) {
+    case "xs":
+      sizeClass = "w-20";
+      break;
+    case "sm":
+      sizeClass = "w-24";
+      break;
+    case "md":
+      sizeClass = "w-30";
+      break;
+    case "lg":
+      sizeClass = "w-36";
+      break;
+    case "xl":
+      sizeClass = "w-48";
+      break;
+    default:
+      sizeClass = "w-30";
+  }
 
   return (
     <Button

@@ -28,15 +28,15 @@ const questionList = [
 
 export const FAQSection = () => {
   return (
-    <section className="flex items-center justify-center flex-col p-10 gap-10">
-      <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
+    <section className="flex items-center justify-center flex-col p-10 gap-10 m-auto lg:my-5 lg: max-w-screen-xl">
+      <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-4xl">
         Frequently Asked Questions
       </h1>
-      <p className="text-grayish-blue text-center">
+      <p className="text-grayish-blue text-center lg:w-[50ch]">
         Frequently Asked Questions Here are some of our FAQs. If you have any
         other questions you’d like answered please feel free to email us.
       </p>
-      <Accordion type="single" className="w-full" collapsible>
+      <Accordion type="single" className="w-full md:w-64 lg:w-96" collapsible>
         {questionList.map((question) => (
           <AccordionItem key={question.id} value={`item-${question.id}`}>
             <AccordionTrigger>{question.question}</AccordionTrigger>

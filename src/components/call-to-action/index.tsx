@@ -27,35 +27,41 @@ export const CallToAction = () => {
   };
 
   return (
-    <section className="flex items-center justify-center flex-col p-10 gap-10 bg-custom-purple text-white">
-      <h3 className="tracking-widest">35,000+ ALREADY JOINED</h3>
-      <h1 className="text-3xl font-bold text-center">
-        Stay up-to-date with what we’re doing
-      </h1>
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col items-center gap-4 w-full"
-        >
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormControl>
-                  <Input
-                    className="text-very-dark-blue"
-                    placeholder="Enter your email address"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage className="text-soft-red" />
-              </FormItem>
-            )}
-          />
-          <ActionButton className="w-full" label="Contact us" color="red" />
-        </form>
-      </Form>
+    <section className="bg-custom-purple text-white lg:py-16">
+      <div className="flex items-center justify-center flex-col p-10 gap-10 m-auto bg-custom-purple text-white lg: max-w-screen-xl">
+        <h3 className="tracking-widest lg:text-xl">35,000+ ALREADY JOINED</h3>
+        <h1 className="text-3xl font-bold text-center lg:text-4xl">
+          Stay up-to-date with what we’re doing
+        </h1>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex flex-col items-center gap-4 w-full md:w-72 lg:w-96"
+          >
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormControl>
+                    <Input
+                      className="text-very-dark-blue m-auto lg:w-96"
+                      placeholder="Enter your email address"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-soft-red" />
+                </FormItem>
+              )}
+            />
+            <ActionButton
+              className="w-full lg:w-96"
+              label="Contact us"
+              color="red"
+            />
+          </form>
+        </Form>
+      </div>
     </section>
   );
 };

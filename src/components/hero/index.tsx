@@ -5,23 +5,21 @@ import { ActionButton } from "../action-button";
 
 export const HeroComponent = () => {
   return (
-    <>
-      <section className="flex justify-center items-center relative">
-        <Image src={HeroMainImg} alt="Hero main image" />
-      </section>
-      <section className="mt-5 flex items-center justify-center flex-col p-10 gap-10">
-        <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
+    <section className="px-6 flex flex-col m-auto lg:max-w-screen-xl lg:flex-row-reverse lg:pr-0">
+      <Image src={HeroMainImg} alt="Hero main image" />
+      <div className="flex items-center justify-center flex-col gap-10 lg:items-start">
+        <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-5xl lg:text-left">
           a simple bookmark manager
         </h1>
-        <p className="text-grayish-blue text-center">
+        <p className="text-grayish-blue text-center lg:w-[50ch] lg:text-left">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div className="flex gap-5">
-          <ActionButton label="Get it on Chrome" />
-          <ActionButton color="white" label="Get it on Firefox" />
+          <ActionButton size="xl" label="Get it on Chrome" />
+          <ActionButton size="xl" color="white" label="Get it on Firefox" />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };

@@ -31,16 +31,16 @@ const browserList = [
 export const DownloadsSection = () => {
   return (
     <section>
-      <div className="mt-5 flex items-center justify-center flex-col p-10 gap-10">
-        <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
+      <div className="mt-5 flex items-center justify-center flex-col p-10 gap-10 m-auto lg:max-w-screen-xl">
+        <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center lg:text-4xl">
           Download the extension
         </h1>
-        <p className="text-grayish-blue text-center">
+        <p className="text-grayish-blue text-center lg:w-[50ch]">
           Download the extension We’ve got more browsers in the pipeline. Please
           do let us know if you’ve got a favourite you’d like us to prioritize.
         </p>
       </div>
-      <div className="flex items-center justify-center flex-col p-10 gap-10">
+      <div className="flex items-center justify-center flex-col p-10 gap-10 lg:flex-row">
         {browserList.map((card) => (
           <Card
             key={card.id}

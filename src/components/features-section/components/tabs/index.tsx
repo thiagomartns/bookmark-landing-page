@@ -5,6 +5,7 @@ import TabsPanelImg1 from "@/assets/images/illustration-features-tab-1.svg";
 import TabsPanelImg2 from "@/assets/images/illustration-features-tab-2.svg";
 import TabsPanelImg3 from "@/assets/images/illustration-features-tab-3.svg";
 import { ActionButton } from "@/components/action-button";
+import { Button } from "@/components/ui/button";
 
 const featuresList = [
   {
@@ -35,8 +36,8 @@ const featuresList = [
 
 export const CustomTabs = () => {
   return (
-    <Tabs defaultValue="1" className="flex flex-col mt-5">
-      <TabsList className="flex-col items-center justify-center mb-10">
+    <Tabs defaultValue="1" className="flex flex-col mt-5 lg:min-w-full">
+      <TabsList className="flex-col items-center justify-center mb-10 lg:flex-row">
         {featuresList.map((feature) => (
           <TabsTrigger key={feature.id} value={feature.id}>
             {feature.feature}
@@ -47,14 +48,23 @@ export const CustomTabs = () => {
         <TabsContent
           key={feature.id}
           value={feature.id}
-          className="flex flex-col gap-7"
+          className="flex flex-col gap-7 items-center lg:flex-row lg:px-5 lg:gap-16"
         >
-          <Image src={feature.img} alt="Bookmark in one click" />
-          <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
-            {feature.title}
-          </h1>
-          <p className="text-grayish-blue text-center">{feature.description}</p>
-          <ActionButton label="More Info" />
+          <Image src={feature.img} alt={feature.title} />
+          <div className="flex flex-col gap-5 lg:items-start">
+            <h1 className="text-3xl capitalize text-very-dark-blue font-bold text-center">
+              {feature.title}
+            </h1>
+            <p className="text-grayish-blue text-center lg:text-left">
+              {feature.description}
+            </p>
+
+            <div className="flex justify-center lg:justify-start">
+              <Button className="bg-custom-purple" size="lg">
+                More Info
+              </Button>
+            </div>
+          </div>
         </TabsContent>
       ))}
     </Tabs>
