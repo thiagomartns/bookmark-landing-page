@@ -36,7 +36,7 @@ export const CallToAction = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col items-center gap-4 w-full md:w-72 lg:w-96 lg:flex-row lg:justify-center"
+            className="flex flex-col gap-4 lg:flex-row lg:justify-center"
           >
             <FormField
               control={form.control}
@@ -45,7 +45,7 @@ export const CallToAction = () => {
                 <FormItem className="w-full">
                   <FormControl>
                     <Input
-                      className="text-very-dark-blue m-auto lg:w-96"
+                      className="text-very-dark-blue m-auto w-96"
                       placeholder="Enter your email address"
                       {...field}
                     />
